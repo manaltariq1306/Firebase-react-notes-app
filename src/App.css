@@ -1,0 +1,253 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.App {
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #ff6347;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Button Styling */
+button {
+  background-color: #ff6347;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: #ff4500;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Input Fields */
+input, textarea {
+  padding: 12px;
+  font-size: 16px;
+  width: 100%;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background-color: #fafafa;
+  transition: border 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #ff6347;
+  outline: none;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+  max-width: 100%;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Auth Section */
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.auth-button {
+  background-color: #4285f4;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.auth-button:hover {
+  background-color: #3367d6;
+}
+
+.auth-button img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+/* Notes Section */
+.notes-container {
+  margin-top: 40px;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.note-item {
+  background-color: #ffe4e1;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+}
+
+.note-item h2 {
+  font-size: 1.5rem;
+  color: #ff6347;
+  margin-bottom: 10px;
+}
+
+.note-item p {
+  font-size: 1rem;
+  color: #666;
+}
+/* Notes Section */
+.notes-container {
+  margin-top: 40px;
+  text-align: left;
+  margin-bottom: 40px;
+  padding: 20px; /* Keep this for spacing */
+  max-width: 80%; /* Set a maximum width */
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff; /* Ensure the container has a background color */
+}
+
+/* Individual Note */
+.note-item {
+  background-color: #ffe4e1;
+  padding: 15px; /* Reduce padding */
+  margin-bottom: 15px; /* Reduce margin between notes */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Reduce shadow for depth */
+  max-width: 90%; /* Keep max width adjusted */
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column; /* Align contents vertically */
+  justify-content: space-between; /* Ensure that the contents are spaced out */
+  height: auto; /* Let the container height adjust based on content */
+  transition: all 0.3s ease; /* Smooth transition on hover */
+}
+
+.note-item:hover {
+  background-color: #fdd8d1; /* Change color on hover for better interaction */
+}
+
+/* Title of the Note */
+.note-item h2 {
+  font-size: 1.5rem; /* Reduce title size */
+  color: #ff6347;
+  margin-bottom: 8px; /* Adjust margin between title and text */
+  font-weight: 600; /* Make the title slightly bolder */
+}
+
+/* Note Text */
+.note-item p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5; /* Reduce line height for better fit */
+  flex-grow: 1; /* Allow the text area to expand to fill available space */
+  margin-bottom: 10px; /* Ensure there’s space between text and buttons */
+}
+
+/* Buttons container inside the notes */
+.note-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end; /* Align buttons to the right */
+  margin-top: 10px; /* Reduce the margin at the top to keep buttons closer */
+}
+
+.edit-btn, .delete-btn {
+  padding: 6px 12px; /* Reduce button size */
+  background-color: #ff6347; /* Match with the main button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn:hover, .delete-btn:hover {
+  background-color: #ff4500; /* Darker orange on hover */
+}
+
+.edit-btn:focus, .delete-btn:focus {
+  outline: none;
+}
+
+
+/* Realtime Section */
+.realtime-container {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #ffebcd;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.realtime-container h2 {
+  font-size: 2rem;
+  color: #ff6347;
+  margin-bottom: 20px;
+}
+
+.realtime-item {
+  background-color: #fffaf0;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.realtime-item p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.realtime-item .message {
+  font-weight: bold;
+  color: #ff6347;
+}
