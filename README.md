@@ -84,4 +84,5 @@ allow read, write: if request.auth != null;
 
 ## Author
 
-Developed as a React and Firebase integration project demonstrating authentication, database management, real-time features, and push notifications.
+Manal Tariq
+
